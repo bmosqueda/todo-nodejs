@@ -5,7 +5,7 @@ const activitySchema = new Schema({
   date: Date,
   name: String,
   status: Number,
-  descriptions: String
+  description: String
 });
 
 module.exports.schema = mongoose.model('Activity', activitySchema);

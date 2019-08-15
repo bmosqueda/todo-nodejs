@@ -3,9 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
-const ActivitySchema = require('../schemas/activity-schema');
 const credentials = require('./server');
-mongoose.connect(`mongodb://${db.host}:${db.port}/${db.collection}`);
+
+mongoose.connect(
+  `mongodb://${credentials.host}:${credentials.port}/${credentials.collection}`
+);
 
 const PORT = process.env.PORT || 3000;
 const app = express();
