@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const activitySchema = new Schema({
-  date: Date,
+  date: {
+    type: Date,
+    default: Date.now()
+  },
   name: String,
   status: Number,
   description: String
